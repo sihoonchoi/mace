@@ -279,11 +279,17 @@ def train(
                         if log_wandb:
                             wandb_log_dict[valid_loader_name] = {
                                 "epoch": epoch,
-                                "valid_loss": valid_loss_head,
-                                "valid_rmse_e_per_atom": eval_metrics[
-                                    "rmse_e_per_atom"
+                                # "valid_loss": valid_loss_head,
+                                # "valid_rmse_e_per_atom": eval_metrics[
+                                #     "rmse_e_per_atom"
+                                # ],
+                                # "valid_rmse_f": eval_metrics["rmse_f"],
+                                "val_loss": valid_loss_head,
+                                "val_mae_e_per_atom": eval_metrics[
+                                    "mae_e_per_atom"
                                 ],
-                                "valid_rmse_f": eval_metrics["rmse_f"],
+                                "val_mae_f": eval_metrics["mae_f"],
+                                "val_mae_s": eval_metrics["mae_stress"],
                             }
                 if plotter and epoch % plotter.plot_frequency == 0:
                     try:
