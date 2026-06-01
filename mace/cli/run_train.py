@@ -869,7 +869,7 @@ def run(args) -> None:
             except Exception: # pylint: disable=W0703
                 restart_lbfgs = True
         if opt_start_epoch is not None:
-            start_epoch = opt_start_epoch
+            start_epoch = opt_start_epoch + 1
 
     ema: Optional[ExponentialMovingAverage] = None
     if args.ema:

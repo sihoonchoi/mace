@@ -954,6 +954,7 @@ def setup_wandb(args: argparse.Namespace):
         project=args.wandb_project,
         entity=args.wandb_entity,
         name=args.wandb_name,
+        id=args.wandb_id,
         config=wandb_config,
         directory=args.wandb_dir,
     )
