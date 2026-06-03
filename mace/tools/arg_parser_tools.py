@@ -17,7 +17,7 @@ def check_args(args):
     if args.log_dir is None:
         args.log_dir = os.path.join(args.work_dir, "logs")
     if args.model_dir is None:
-        args.model_dir = args.work_dir
+        args.model_dir = os.path.join(args.work_dir, "models")
     if args.checkpoints_dir is None:
         args.checkpoints_dir = os.path.join(args.work_dir, "checkpoints")
     if args.results_dir is None:
